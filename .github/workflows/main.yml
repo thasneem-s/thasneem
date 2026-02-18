@@ -1,0 +1,14 @@
+name: basic CI workflow
+#when the workflow should run
+on:
+push:
+branches: ["main"]
+pull request:
+branches: ["main"]
+jobs:
+build:
+runs-on:ubuntu_latest
+-name:Checkoutrepository
+uses:actions/checkout@v4
+-name:display message
+run:echo"github actions workflow is running successfully!"
